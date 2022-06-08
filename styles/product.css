@@ -1,0 +1,170 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*===============================Search Part Styling=============================*/
+
+#search{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+#search>div{
+    margin: 10px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-size: 30px;
+}
+#searchbar{
+    font-size: 18px;
+    width: 500px;
+    margin-right: 80px;
+    margin-left: -80px;
+    padding: 6px;
+}
+#search #filter{
+    color: black;
+    background-color: rgb(235, 191, 191);
+    width: 240px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 35px;
+}
+#search #filter:hover{
+    color: white;
+    background-color: brown;
+}
+#productlist{
+    cursor: pointer;
+    font-weight: bolder;
+}
+#productlist{
+    font-weight: bold;
+}
+#productlist:hover{
+    color: #f1404f;
+}
+
+
+/*====================================Image And Product Styling=====================================*/
+
+.image{
+    width: 90%;
+    margin: auto;
+    font-display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.image>div>a>img{
+    margin-top: 10px;
+    width: 100%;
+    height: 220px;
+}
+.style{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.style>div{
+    cursor: pointer;
+    margin-top: 5px;
+    height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button{
+    cursor: pointer;
+}
+#price{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 17px;
+}
+p{
+    text-align: center;
+}
+
+
+
+/*=======================Filter Styling========================*/
+
+#sidebar{
+    height: 100%;
+    right: 0px;
+    background-color: rgb(212, 155, 165);
+    width: 400px;
+    margin-top: 0px;
+    position: fixed;
+    display: none;
+}
+.menu{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menu li a{
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+.btn-cart{
+    padding:10px;
+    width:80%;
+    border:0;
+    background-color: lightcoral;
+    color:white;
+    
+}
+.image-container-div{
+    height:200px;
+}
+.description-div{
+    height:50px;
+}
+
+/*==========Another Style=========*/
+#product-wrapper-container{
+    /* border:1px solid red; */
+    width:100%;
+    margin:auto;
+    right:0;
+    left:0;
+    background-color:#eeeef0;
+}
+.nav-wrapper-p{
+    display: flex;
+    width:50%;
+    justify-content: center;
+    gap:6%;
+    margin:auto;
+}
+.inner-content-p1:hover{
+    border-bottom:5px solid lightcoral;
+    color:lightcoral;
+    transition: 0.5s;
+}
+.inner-content-p2:hover{
+    border-bottom:5px solid lightcoral;
+    color:lightcoral;
+    transition: 0.5s;
+}

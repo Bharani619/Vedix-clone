@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <style>
+         #container{
+             text-align: center;
+             margin: 40px;
+             width: 500px;
+             height: 400px;
+             margin: auto;
+             
+         }
+         #container1{
+             text-align: center;
+             margin: 40px;
+             width: 500px;
+             height: 350px;
+             margin: auto;
+             
+         }
+         #navbar{
+             text-align: left;
+             margin-top: 20px;
+             font-size: 1.5em; 
+             margin-left: 95px;
+         }
+         input {
+             font-size: 1em;
+             height: 45px;
+             width:400px;
+             margin-top: 20px;
+             border: 1px lightgray;
+             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            
+         }
+         .btn-signup {
+             font-size: 1em;
+             height: 45px;
+             width:400px;
+             margin-top: 20px;
+             border: 1px orange;
+             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+             border-radius: 2%;
+         }
+         button:hover {
+             height: 40px;
+             width:400px;
+             margin-top: 20px;
+             color: white;
+             background-color: rgb(247, 158, 158);
+             border: none;
+             font-size: 1.1em;
+         }
+       .btn-signup {
+            height: 40px;
+            font-size: 1.1em;
+             width:400px;
+             margin-top: 20px;
+             color: white;
+             background-color: rgb(247, 123, 123);
+             border: none;
+         }
+
+         .box {
+             display: flex;
+             justify-content: space-around;
+         }
+         
+         i {
+            font-size:xx-large;
+             display: flex;
+             margin-left: 30px;
+             margin-right: 30px;
+         }
+    </style>
+</head>
+<body>
+    <div id="signup-container">
+    <div id="navbar">
+        <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376">
+    </div>
+    <div id="container">
+    <form>
+        <h2>Sign Up</h2>
+        <input id="Firstname" type="text" placeholder="First Name" size="30"/>
+        <input id="lastname" type="text" placeholder="Last Name" size="30"/>
+        <input id="email" type="email" placeholder="Email" size="30"/>
+        <input id="pass" type="password" name="password" placeholder="Password" minlength="8" required/>
+        <br>
+    </form>
+      <button onclick="Register()" class="btn-signup">Signup</button>
+    </div>
+
+    <div id="container1">
+        <hr width="80%">
+        <br>
+        <h3>Continue with</h3>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-google"></i>
+        </div>
+        <br>
+        <h4>Already have an account?</h4>
+        <p>By clicking on the button above, I gave permission to send my educational content on<br>
+            Customize Ayurveda and hair through emails.
+        </p>
+        <h3>10,00,000+ Indians Use Vedix Everyday</h3>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+   
+   let Register = async()=>{
+
+try{
+
+  let register_data = {
+      firstName:document.getElementById("Firstname").value,
+      lastName:document.getElementById("lastname").value,
+      email:document.getElementById("email").value,
+      password:document.getElementById("pass").value,
+      
+  }
+
+  register_data = JSON.stringify(register_data);
+
+  console.log(register_data);
+  
+      let res = await fetch(`http://masai-api-mocker.herokuapp.com/auth/register`,{
+          method:'POST',
+
+          body:register_data,
+
+          headers : {
+              "Content-Type":'application/json',
+          }
+      });
+
+       let data = await res.json();
+       console.log("data:",data);
+
+  }
+  catch(error){
+      console.log("error:",error);
+  }
+};
+    
+
+
+</script>

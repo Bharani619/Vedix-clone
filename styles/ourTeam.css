@@ -1,0 +1,21 @@
+#Team-container{
+    padding:20px;
+}
+.Team-flex{
+    display: flex;
+    margin-bottom:30px;
+    width:100%;
+}
+.bio{
+    margin-left:20px;
+    width:60%;
+    font-size:15px;
+}
+.Team-text,.Team-content{
+    width:80%;
+    margin:auto;
+    text-align: justify;
+}
+.Team-text{
+    margin-bottom:4%;
+}

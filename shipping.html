@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+    <link rel="stylesheet" href="shiping.css" >
+
+</head>
+<body>
+    <div id="container_sh">
+        <div id="left_sh">
+            <div ><a href="index.html"><img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376" alt="Vedix" itemprop="logo"></a></div>
+            <div><p class="p1_sh">Cart > Information > <span class="spn_sh">Shipping</span> > Payment</p></div>
+
+            <div id="conct_ship_sh">
+                <div id="contact_sh">
+                    <div class="contact1_sh">Contact</div>
+                    <!-- <input clas= "input_sh"/> -->
+                    <div id="cont_sh"><p></p></div>
+                    <div class="change_sh">Change</div>
+                </div>
+               <div class="div_sh"></div>
+               
+                <div id="ship_sh">
+                    <div class="ship1_sh">Ship to</div>
+                    <div id="cont1_sh"><p></p></div>
+                    <div class="change_sh">Change</div>
+                </div>
+            </div>                 
+            
+            <div class="shiping_sh"><p>Shipping Mode</p></div> 
+            <input type="radio"/>
+            <label  class="standard_sh">Standard shiping</label>
+     
+ 
+        <div id="container2_sh">
+            <div class="return_sh" onclick="window.location.href='checkout.html'">Return to Information</div>
+            <div><button class="button_sh"  onclick="window.location.href='payment2.html'">Continue to payment</button></div>
+         </div>
+        </div> 
+
+                <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>right side>>>>>>>>>>>>>>>>>>> -->
+                <div id="right_c">
+                    <input class="input3_c" type="text" placeholder="Discount code"/> 
+                    <button class="apply_c">Apply</button>
+                    
+                    
+                    <div class="subtotal_c" style="display: flex; justify-content: space-between;">
+                        <div>Subtotal</div>
+                        <div id="total">0</div>
+                    </div>
+    
+                    <div id="shiping_c">
+                        <div>Shipping</div>
+                        <div>Free</div>
+                    </div>
+    
+                    <div id="totl_inr_c" >
+                        <div class="total_c">Total</div>
+                        <div id="total1"></div>
+                    </div>
+            </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+   
+    var address=JSON.parse(localStorage.getItem('address'))
+    var phone=JSON.parse(localStorage.getItem('phnumber'))
+    var s=document.querySelector('#cont_sh')
+    s.innerHTML=phone;
+    console.log(address,phone)
+
+    let price=document.getElementById('total');
+let total2=JSON.parse(localStorage.getItem('price'));
+console.log(total2);
+price.textContent=total2;
+
+let totalAmout=document.getElementById('total1');
+totalAmout.style.marginTop='20px';
+totalAmout.innerHTML=`INR ${total2}`;
+
+    var p=document.querySelector('#cont1_sh')
+    p.innerHTML=address;
+
+</script>

@@ -1,0 +1,77 @@
+.about-vedix{
+    /* width:85%; */
+    margin:auto;
+}
+.founders{
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    grid-gap:10%;
+    justify-content: center;
+    text-align: center;
+}
+.demo-grid{
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+}
+.awards-img{
+    display: grid;
+    grid-template-columns: repeat(3,380px);
+    grid-gap:20px;
+    justify-content: center;
+   
+}
+.awards-section h3{
+    text-align: center;
+    font-size:25px;
+}
+.awards-section{
+    margin-top:5%;
+    background-color: #f0e9d7;
+    padding:20px;
+}
+.storyabout h2{
+    text-align: center;
+}
+.storyabout{
+   background-color: #f0eae5;
+   padding:20px;
+
+}
+.inner-story-content{
+    font-size:20px;
+    width:80%;
+    margin:auto;
+}
+.storyabout,.founders,.demo-products,.awards-section{
+    margin-bottom:50px;
+}
+.demo-products{
+    width:83%;
+    margin:auto;
+}
+.demo-grid p{
+    margin-left:20px;
+    font-size:23px;
+}
+.about-family,.btn_f{
+    text-align: center;
+    width:70%;
+    margin:auto;
+}
+.about-family{
+    font-size: 17px;
+}
+.about-family h3{
+    font-size:25px;
+}
+.btn_f{
+    padding:20px;
+}
+.btn_f button{
+    padding:15px;
+    width:280px;
+    background-color:#f4a261;
+    color:white;
+    border:0;
+}

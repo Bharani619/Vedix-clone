@@ -1,0 +1,106 @@
+
+
+#sidebar {
+    height: 100%;
+    right: 0px;
+    background-color: rgb(212, 155, 165);
+    width: 400px;
+    margin-top: 0px;
+    position: fixed;
+    display: none;
+    overflow-y: scroll;
+}
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    align-items: center;
+    grid-gap: 10px;
+    height: 400px;
+}
+
+#content>div {
+    padding: 10px;
+
+}
+input{
+    height: 20px;
+    width: 20px;
+}
+.select input {
+    height: 20px;
+    width: 20px;
+    border: 2px solid rgb(184, 65, 65);
+    margin-right: 10px;
+    margin-left: 70px;
+}
+
+.select {
+    display: flex;
+}
+
+label {
+    font-size: 20px;
+}
+
+#apply_reset {
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(212, 155, 165);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    width: 100%;
+    height: 60px;
+}
+
+#apply_reset>button {
+    margin-top: 5px;
+    width: 100px;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 12px 42px;
+    border-radius: 15px;
+}
+#head{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 110px;
+}
+/*.fas{
+    margin-right: 50px;
+    margin-top: 18px;
+    font-size: 35px;
+    cursor: pointer;
+}*/
+#apply_reset> #reset {
+    border: 2px solid rgb(196, 83, 83);
+    background-color: aliceblue;
+    color: black;
+}
+
+#apply {
+    background-color: rgb(197, 81, 81);
+    padding: 8px 8px;
+    border: none;
+    color: white;
+}
+
+#content input[type=radio] {
+    border: 1px solid rgb(179, 64, 64);
+    padding: 0.1em;
+    -webkit-appearance: none;
+}
+
+#content input[type=radio]:checked {
+    background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+    background-size: 15px 15px;
+}
+
+input[type=radio]:focus {
+    outline-color: transparent;
+}
